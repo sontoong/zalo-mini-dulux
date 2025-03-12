@@ -14,7 +14,7 @@ import ConstructionDetailsPage from "./presentation/pages/ConstructionDetailsPag
 import ConstructionListPage from "./presentation/pages/ConstructionListPage";
 import HomePage from "./presentation/pages/HomePage";
 import NotificationPage from "./presentation/pages/NotificationPage";
-import ReportStatisticsPage from "./presentation/pages/ReportStatisticsPage";
+import ReportStatisticsPage from "./presentation/pages/ReportStatisticsPage2";
 
 import "dayjs/locale/vi";
 import timezone from "dayjs/plugin/timezone";
