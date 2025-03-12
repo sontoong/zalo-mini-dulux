@@ -1,10 +1,3 @@
-# AkzoNobel for Salesman
-
-## ZMP CLI Options
-
-ZMP app created with following options:
-
-```
 {
   "cwd": "D:\\work\\aziCloud\\azicloud-activation-sup",
   "newProject": true,
@@ -12,7 +5,7 @@ ZMP app created with following options:
   "package": "zmp-ui",
   "framework": "react-typescript",
   "cssPreProcessor": "scss",
-  "template": "single-view",
+  "template": "blank",
   "includeTailwind": true,
   "theming": {
     "color": "#007aff",
@@ -22,9 +15,3 @@ ZMP app created with following options:
   "customBuild": false,
   "stateManagement": "recoil"
 }
-```
-
-## NPM Scripts
-
-- 🔥 `start` - run development server
-- 🙏 `deploy` - deploy mini app for production

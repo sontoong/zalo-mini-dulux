@@ -1,0 +1,25 @@
+.topbar {
+  &.zaui-header {
+    position: sticky;
+    height: auto;
+    margin-bottom: 0;
+    flex: none;
+    // padding: 0;
+    padding-bottom: 10px;
+    // padding-top: 5.2px;
+
+    &.no-border {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  &.other {
+    .zaui-header-title {
+      display: flex;
+      justify-content: center;
+      margin-left: 0;
+      margin-right: 24px;
+    }
+  }
+}
