@@ -6,7 +6,7 @@ import { notification, QRCode, Tag } from "antd";
 import clsx from "clsx";
 import { ScanOutlined } from "@ant-design/icons";
 
-const numOfScan = [0, 4][1];
+const numOfScan = [0, 4][0];
 
 const QRDisplay = () => {
   const [api, contextHolder] = notification.useNotification();
