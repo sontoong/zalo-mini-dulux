@@ -21,6 +21,11 @@ const FeatureList = () => {
       image: Zalo,
       linkTo: "/chat-zalo",
     },
+    {
+      name: "QR",
+      image: Zalo,
+      linkTo: "/my-qr",
+    },
   ];
 
   return (

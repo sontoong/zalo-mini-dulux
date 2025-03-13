@@ -15,6 +15,7 @@ import ConstructionListPage from "./presentation/pages/ConstructionListPage";
 import HomePage from "./presentation/pages/HomePage";
 import NotificationPage from "./presentation/pages/NotificationPage";
 import ReportStatisticsPage from "./presentation/pages/ReportStatisticsPage2";
+import MyQRPage from "./presentation/pages/MyQRPage";
 
 import "dayjs/locale/vi";
 import timezone from "dayjs/plugin/timezone";
@@ -39,6 +40,7 @@ const AppRoutes = () => {
       <Route path="/thong-ke" element={<ReportStatisticsPage />}></Route>
       <Route path="/chat-zalo" element={<HomePage />}></Route>
       <Route path="/thong-bao" element={<NotificationPage />}></Route>
+      <Route path="/my-qr" element={<MyQRPage />}></Route>
     </AnimationRoutes>
   );
 };

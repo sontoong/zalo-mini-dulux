@@ -44,6 +44,7 @@ module.exports = {
         yellow6: "#B89C00",
         "orange-gradient-from": "#FF8B18",
         "orange-gradient-to": "#FF9F41",
+        stroke2: "#EAECEA",
       },
       fontSize: {
         "2xs": "10px",
