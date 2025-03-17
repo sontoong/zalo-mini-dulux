@@ -18,6 +18,7 @@ import ReportStatisticsPage from "./presentation/pages/ReportStatisticsPage2";
 import MyQRPage from "./presentation/pages/MyQRPage";
 import WorkerRegistrationPage from "./presentation/pages/WorkerRegistrationPage";
 import WorkerRegistrationResultPage from "./presentation/pages/WorkerRegistrationResultPage";
+import CheckinPostPage from "./presentation/pages/CheckinPostPage";
 
 import "dayjs/locale/vi";
 import timezone from "dayjs/plugin/timezone";
@@ -51,6 +52,7 @@ const AppRoutes = () => {
         path="/worker-registration-result"
         element={<WorkerRegistrationResultPage />}
       ></Route>
+      <Route path="/checkin-post" element={<CheckinPostPage />}></Route>
     </AnimationRoutes>
   );
 };
