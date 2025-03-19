@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ElevateButton } from "../common/button";
 import { Icon, Sheet } from "zmp-ui";
 import { createPortal } from "react-dom";
-import { Card, Form, Input } from "antd";
+import { Card, Form } from "antd";
 import { ImageUpload, UploadImage } from "../common/image-upload";
 import { InputNumber } from "../common/input-number";
 
@@ -14,6 +14,7 @@ export const ConfirmOrderButton = () => {
   const onFinish = (values: any) => {
     console.log(values);
     setVisible(false);
+    form.resetFields();
     setImages([]);
   };
 
@@ -34,18 +35,17 @@ export const ConfirmOrderButton = () => {
             setImages([]);
           }}
           mask
-          handler
+          handler={false}
           swipeToClose
           unmountOnClose
-          style={{ background: "#F7F8FA" }}
-          // defaultSnapPoint={0.5}
-          // snapPoints={() => [0.5, 0.8]}
+          style={{ background: "#F7F8FA", paddingTop: "20px" }}
+          height={"700px"}
         >
           <Form
             form={form}
             onFinish={onFinish}
             autoComplete="off"
-            className="px-5"
+            className="flex-1 px-5"
           >
             <Form.Item
               name="price"
@@ -54,7 +54,7 @@ export const ConfirmOrderButton = () => {
             >
               <InputNumber.Currency
                 placeholder="Giá trị đơn hàng"
-                className="w-full border-0 p-3 drop-shadow"
+                className="w-full border-0 px-3 py-2 shadow"
               />
             </Form.Item>
             <Form.Item>
@@ -76,12 +76,22 @@ export const ConfirmOrderButton = () => {
                 extra={
                   <button
                     type="button"
-                    className="rounded-md bg-greenBtn p-[6px] text-xs text-white"
+                    className="rounded-[4px] bg-greenBtn p-[6px] text-xs text-white"
                   >
                     Chụp ảnh
                   </button>
                 }
-                className="drop-shadow"
+                className="shadow"
+                styles={{
+                  header: {
+                    borderBottom: "1px solid rgba(200, 200, 200, 0.7)",
+                    paddingLeft: "12px",
+                    paddingRight: "12px",
+                  },
+                  body: {
+                    padding: "12px 12px 20px 12px",
+                  },
+                }}
               >
                 <ImageUpload
                   images={images}
@@ -90,14 +100,14 @@ export const ConfirmOrderButton = () => {
                 />
               </Card>
             </Form.Item>
-            <Form.Item>
-              <ElevateButton
-                text="Xác nhận"
-                className="w-full bg-greenBtn text-sm drop-shadow-greenBtn"
-                onClick={() => form.submit()}
-              />
-            </Form.Item>
           </Form>
+          <div className="w-full px-5 py-10">
+            <ElevateButton
+              text="Xác nhận"
+              className="w-full bg-greenBtn text-sm drop-shadow-greenBtn"
+              onClick={() => form.submit()}
+            />
+          </div>
         </Sheet>,
         document.body,
       )}

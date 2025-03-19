@@ -1,6 +1,6 @@
-import { SearchOutlined } from "@mui/icons-material";
 import { Input } from "antd";
 import React, { FC } from "react";
+import SearchIcon from "../../static/search-icon.svg";
 
 type SearchBarProps = {
   placeholder?: string;
@@ -11,7 +11,7 @@ export const SearchBar: FC<SearchBarProps> = ({ placeholder }) => {
     <Input
       size="large"
       placeholder={placeholder}
-      prefix={<SearchOutlined />}
+      prefix={<img src={SearchIcon} />}
       className="border-none bg-blue2"
     />
   );

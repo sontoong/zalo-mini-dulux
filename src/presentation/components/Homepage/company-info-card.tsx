@@ -5,7 +5,7 @@ import CompanyLogo from "../../static/company-logo.png";
 
 const CompanyInfoCard = () => {
   return (
-    <Card className="shadow">
+    <Card className="shadow" styles={{ body: { padding: "12px" } }}>
       <div className="flex gap-5">
         <div className="size-[100px] shrink-0 -translate-y-1/2 overflow-hidden rounded-lg border border-solid border-white">
           <img src={CompanyLogo} className="size-full object-cover" />
@@ -17,7 +17,7 @@ const CompanyInfoCard = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-5">
+      <div className="absolute bottom-0 py-3">
         <div className="flex items-center gap-1 text-gray5">
           <PhoneInTalk style={{ fontSize: "14px" }} />
           <div className="text-2xs">Số điện thoại</div>

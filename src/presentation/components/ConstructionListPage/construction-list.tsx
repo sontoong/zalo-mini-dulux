@@ -9,7 +9,7 @@ const ConstructionList = () => {
   const features: ConstructionInfo[] = [
     {
       id: "1",
-      contractor: "Công ty TNHH ABC",
+      contractor: "Quỳnh Trâm",
       image: Construction,
       name: "Công trình 1 ",
       status: "Đang theo dõi",
@@ -17,7 +17,7 @@ const ConstructionList = () => {
     },
     {
       id: "2",
-      contractor: "Công ty TNHH ABC",
+      contractor: "Quỳnh Trâm",
       image: Construction,
       name: "Công trình 1",
       status: "Thành công",
@@ -25,7 +25,7 @@ const ConstructionList = () => {
     },
     {
       id: "3",
-      contractor: "Công ty TNHH ABC",
+      contractor: "Quỳnh Trâm",
       image: Construction,
       name: "Công trình 1",
       status: "Thất bại",
@@ -33,7 +33,7 @@ const ConstructionList = () => {
     },
     {
       id: "4",
-      contractor: "Công ty TNHH ABC",
+      contractor: "Quỳnh Trâm",
       image: Construction,
       name: "Công trình 1",
       status: "Quá hạn",

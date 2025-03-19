@@ -1,7 +1,9 @@
-import { Card, Tag } from "antd";
+import { Card } from "antd";
 import React, { FC } from "react";
 import { Icon, useNavigate } from "zmp-ui";
 import { Circle } from "@mui/icons-material";
+import { Tag } from "../common/tag";
+import clsx from "clsx";
 
 export type ConstructionInfo = {
   image: string;
@@ -23,18 +25,21 @@ export const ConstructionInfoCard: FC<ConstructionInfo> = ({
   const navigate = useNavigate();
 
   return (
-    <Card onClick={() => navigate(linkTo)}>
-      <div className="flex size-full gap-2">
-        <div className="bg-blue2 size-[50px] shrink-0 overflow-hidden rounded-md p-2">
+    <Card
+      styles={{ body: { padding: "10px 12px" } }}
+      onClick={() => navigate(linkTo)}
+    >
+      <div className="flex size-full gap-3">
+        <div className="size-[50px] shrink-0 overflow-hidden rounded-md bg-blue2 p-2">
           <img src={image} className="size-full object-cover" />
         </div>
         <div className="flex size-full flex-col gap-1">
           <div className="text-sm font-semibold">{name}</div>
-          <div className="text-gray5 text-xs">Mã công trình: {id}</div>
-          <div className="text-gray6 text-xs">Nhà thầu: {contractor}</div>
+          <div className="text-xs text-gray5">Mã công trình: {id}</div>
+          <div className="text-xs text-gray6">Nhà thầu: {contractor}</div>
         </div>
       </div>
-      <div className="absolute left-0 top-0 flex size-full flex-col justify-between px-3 py-5">
+      <div className="absolute left-0 top-0 flex size-full flex-col justify-between px-3 py-3">
         {/* Chevron top right */}
         <div className="ml-auto size-fit font-bold">
           <Icon icon="zi-chevron-right" />
@@ -42,9 +47,17 @@ export const ConstructionInfoCard: FC<ConstructionInfo> = ({
         {/* Tag bottom right */}
         <div className="ml-auto size-fit">
           <Tag
-            icon={<Circle fontSize="inherit" />}
+            icon={
+              <Circle
+                className="!text-[8px]"
+                style={{ color: statusColor[status] }}
+              />
+            }
             color={statusColor[status]}
-            className="m-0 flex items-center gap-1 border-2"
+            className={clsx("m-0 flex items-center gap-1", {
+              "!bg-gray1": status === "Quá hạn",
+            })}
+            style={{ borderColor: statusColor[status] }}
           >
             {status}
           </Tag>
@@ -55,8 +68,8 @@ export const ConstructionInfoCard: FC<ConstructionInfo> = ({
 };
 
 const statusColor = {
-  "Đang theo dõi": "gold",
-  "Thành công": "green",
-  "Thất bại": "volcano",
-  "Quá hạn": "",
+  "Đang theo dõi": "#FFD800",
+  "Thành công": "#31CE80",
+  "Thất bại": "#FB5B5B",
+  "Quá hạn": "#798174",
 } as const;

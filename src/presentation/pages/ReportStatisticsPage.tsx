@@ -1,7 +1,7 @@
 import React from "react";
 import { Header, Page } from "zmp-ui";
-import { ReportFilters } from "../components/ReportStatictics";
-import ReportList from "../components/ReportStatictics/report-list";
+import { ReportFilters } from "../components/ReportStatistics";
+import ReportList from "../components/ReportStatistics/report-list";
 
 const ReportStatistics = () => {
   return (

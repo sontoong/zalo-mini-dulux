@@ -11,6 +11,7 @@ export const FailOrderButton = () => {
   const onFinish = (values: any) => {
     console.log(values);
     setVisible(false);
+    form.resetFields();
   };
 
   return (
@@ -29,16 +30,19 @@ export const FailOrderButton = () => {
             form.resetFields();
           }}
           mask
-          handler
+          handler={false}
           swipeToClose
           unmountOnClose
-          style={{ background: "#F7F8FA" }}
+          style={{ background: "#F7F8FA", paddingTop: "20px" }}
         >
+          <div className="text-center text-sm">
+            Vui lòng nhập lý do công trình thất bại
+          </div>
           <Form
             form={form}
             onFinish={onFinish}
             autoComplete="off"
-            className="px-5"
+            className="px-5 pt-3"
             onFinishFailed={(value) => console.log(value)}
           >
             <Form.Item

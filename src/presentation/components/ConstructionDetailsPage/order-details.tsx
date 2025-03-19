@@ -10,16 +10,18 @@ const OrderDetails = () => {
   };
 
   return (
-    <Card title={<div className="text-lg font-bold">Thông tin đơn hàng</div>}>
+    <Card styles={{ body: { padding: "12px" } }}>
       <div className="text-sm">
+        <div className="text-lg font-bold">Thông tin công trình</div>
+        <Divider className="my-3" />
         <div>
           <div className="text-gray5">Giá trị đơn hàng</div>
           <div className="font-medium">{data.price}</div>
         </div>
-        <Divider />
+        <Divider className="my-3" />
         <div>
           <Space>
-            <button className="text-blue4 border-blue4 bg-blue3 size-[30px] rounded-lg border border-solid">
+            <button className="size-[30px] rounded-lg border border-solid border-blue4 bg-blue3 text-blue4">
               <Icon icon="zi-camera" size={20} />
             </button>
             <div className="text-xs">Chụp hình chứng từ mua hàng</div>

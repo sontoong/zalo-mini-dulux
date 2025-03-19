@@ -52,7 +52,7 @@ const MyApp = () => {
             token: {
               colorPrimary: "#005AE0",
               fontFamily:
-                "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif",
+                "'Open Sans', 'Inter',-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif",
             },
           }}
           form={{ validateMessages }}

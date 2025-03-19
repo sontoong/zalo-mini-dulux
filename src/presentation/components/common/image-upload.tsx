@@ -1,6 +1,5 @@
 import { App, GetProp, UploadFile, UploadProps } from "antd";
 import React, { useState } from "react";
-import { PlusOutlined } from "@ant-design/icons";
 import { Modal, Upload } from "antd";
 import { RequiredFields } from "../../utils/types";
 import { v4 as uuidv4 } from "uuid";
@@ -13,7 +12,7 @@ function ImageUpload(props: UploadImageProps) {
   const imagesWithUid = images.map((image) => {
     return {
       ...image,
-      uid: uuidv4(),
+      uid: image.uid ?? uuidv4(),
     };
   });
 
@@ -118,7 +117,7 @@ function UploadImg(
 type FileType = Parameters<GetProp<UploadProps, "beforeUpload">>[0];
 export type UploadImage = Omit<UploadFile, "uid">;
 type UploadImageProps = {
-  images: UploadImage[];
+  images: UploadImage[] | UploadFile[];
   setImages: React.Dispatch<React.SetStateAction<UploadImage[]>>;
   maxCount?: UploadProps["maxCount"];
 };

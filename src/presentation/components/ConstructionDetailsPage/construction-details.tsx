@@ -16,23 +16,25 @@ const ConstructionDetails = () => {
   };
 
   return (
-    <Card title={<div className="text-lg font-bold">Thông tin công trình</div>}>
+    <Card styles={{ body: { padding: "12px" } }}>
       <div className="text-sm">
+        <div className="text-lg font-bold">Thông tin công trình</div>
+        <Divider className="my-3" />
         <div>
-          <div className="text-gray5">Mã công trình</div>
+          <div className="font-normal text-gray5">Mã công trình</div>
           <div className="font-medium">{data.id}</div>
         </div>
-        <Divider />
+        <Divider className="my-3" />
         <div>
           <div className="text-gray5">Loại công trình</div>
           <div className="font-medium">{data.constructionType}</div>
         </div>
-        <Divider />
+        <Divider className="my-3" />
         <div>
           <div className="text-gray5">Loại sơn</div>
           <div className="font-medium">{data.paintType}</div>
         </div>
-        <Divider />
+        <Divider className="my-3" />
         <Space direction="vertical">
           <div>
             <div className="text-gray5">Địa chỉ công trình</div>
@@ -40,30 +42,30 @@ const ConstructionDetails = () => {
           </div>
           <Button
             variant="secondary"
-            className="!size-fit !rounded-lg !px-2 !py-1 !text-sm"
+            className="!size-fit !rounded-lg !bg-blue2 !px-2 !py-1 !text-sm !font-normal"
             suffixIcon={<Icon icon="zi-location-solid" />}
           >
             Xem vị trí công trình
           </Button>
         </Space>
-        <Divider />
+        <Divider className="my-3" />
         <div>
           <div className="text-gray5">Người liên hệ</div>
           <div className="font-medium">
             {data.contactName} ({data.contactNumber})
           </div>
         </div>
-        <Divider />
+        <Divider className="my-3" />
         <div>
           <div className="text-gray5">Vai trò</div>
           <div className="font-medium">{data.contactRole}</div>
         </div>
-        <Divider />
+        <Divider className="my-3" />
         <div>
           <div className="text-gray5">Giá trị ước tính công trình</div>
           <div className="font-medium">{data.estPrice}</div>
         </div>
-        <Divider />
+        <Divider className="my-3" />
         <div>
           <div className="text-gray5">Thời gian sơn công trình</div>
           <div className="font-medium">{data.date}</div>
