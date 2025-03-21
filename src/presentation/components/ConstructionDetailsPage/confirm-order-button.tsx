@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { ElevateButton } from "../common/button";
-import { Icon, Sheet } from "zmp-ui";
+import { Sheet } from "zmp-ui";
 import { createPortal } from "react-dom";
 import { Card } from "antd";
 import { ImageUpload, UploadImage } from "../common/image-upload";
 import { InputNumber } from "../common/input-number";
 import { Form } from "../common/form";
+import CameraIcon from "../../static/camera-icon.svg";
 
 export const ConfirmOrderButton = () => {
   const [form] = Form.useForm();
@@ -28,7 +29,11 @@ export const ConfirmOrderButton = () => {
       />
       {createPortal(
         <Sheet
-          title="Ghi nhận thông tin đơn hàng"
+          title={
+            (
+              <span className="font-title">Ghi nhận thông tin đơn hàng</span>
+            ) as unknown as string
+          }
           visible={visible}
           onClose={() => {
             setVisible(false);
@@ -66,13 +71,20 @@ export const ConfirmOrderButton = () => {
                   <div className="flex gap-3">
                     <button
                       type="button"
-                      className="size-[30px] rounded-lg border border-solid border-blue4 bg-blue3 text-blue4"
+                      className="bg-blue1 relative size-[30px] rounded-lg border border-solid border-blue3 text-blue4"
                     >
-                      <Icon icon="zi-camera" size={20} />
+                      <img
+                        src={CameraIcon}
+                        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+                      />
                     </button>
                     <div className="flex flex-col">
-                      <div className="text-xs">Chụp hình chứng từ mua hàng</div>
-                      <div className="text-2xs text-gray5">(Tối đa 3 hình)</div>
+                      <div className="text-xs text-black">
+                        Chụp hình chứng từ mua hàng
+                      </div>
+                      <div className="text-2xs font-normal text-gray5">
+                        (Tối đa 3 hình)
+                      </div>
                     </div>
                   </div>
                 }
@@ -84,10 +96,9 @@ export const ConfirmOrderButton = () => {
                     Chụp ảnh
                   </button>
                 }
-                className="shadow"
+                className="pt-2 shadow"
                 styles={{
                   header: {
-                    borderBottom: "1px solid rgba(200, 200, 200, 0.7)",
                     paddingLeft: "12px",
                     paddingRight: "12px",
                   },
@@ -100,6 +111,18 @@ export const ConfirmOrderButton = () => {
                   images={images}
                   setImages={setImages}
                   maxCount={3}
+                  className={"customSizedUpload"}
+                  itemRender={(originNode, file) => (
+                    <div
+                      {...originNode.props}
+                      style={{
+                        width: 71,
+                        height: 71,
+                        backgroundImage: `url(${file.url})`,
+                        backgroundSize: "cover",
+                      }}
+                    />
+                  )}
                 />
               </Card>
             </Form.Item>

@@ -1,3 +1,14 @@
+.customSizedUpload {
+  .ant-upload {
+    width: 71px !important;
+    height: 71px !important;
+  }
+  .ant-upload-list-item-container {
+    width: 71px !important;
+    height: 71px !important;
+  }
+}
+
 @media (max-width: 648px) {
   .ant-picker-panels {
     position: relative;

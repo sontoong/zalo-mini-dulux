@@ -11,11 +11,11 @@ export const NotificationCard = () => {
         </div>
       </Badge>
       <div className="flex size-full flex-col gap-1">
-        <div className="text-sm font-semibold">
+        <div className="font-title text-sm font-bold">
           Nhận được công trình mới từ Nguyễn Văn Hà
         </div>
-        <div className="text-xs">Mã công trình: 12344</div>
-        <div className="text-gray4 text-xs">19/2/2024, 9:42 PM</div>
+        <div className="text-xs font-normal">Mã công trình: 12344</div>
+        <div className="text-xs font-normal text-gray4">19/2/2024, 9:42 PM</div>
       </div>
     </div>
   );

@@ -13,10 +13,12 @@ export const ReportCard: FC = ({}) => {
       >
         <div className="flex flex-col gap-2">
           <Space>
-            <div className="flex size-[28px] items-center justify-center rounded-full bg-yellow1 p-1 text-yellow5">
+            <div className="flex size-[28px] items-center justify-center rounded-full bg-yellow2 p-1 text-yellow5">
               <img src={FollowingIcon} />
             </div>
-            <div className="text-sm font-bold text-yellow6">Đang theo dõi</div>
+            <div className="font-title text-sm font-bold text-yellow6">
+              Đang theo dõi
+            </div>
           </Space>
           <div>
             <span className="text-xl font-semibold text-gray6">1,400</span>{" "}
@@ -44,7 +46,9 @@ export const ReportCard: FC = ({}) => {
             <div className="flex size-[28px] items-center justify-center rounded-full bg-green2 p-1 text-green3">
               <CheckCircle className="!text-lg" />
             </div>
-            <div className="text-sm font-bold text-green4">Thành công</div>
+            <div className="font-title text-sm font-bold text-green4">
+              Thành công
+            </div>
           </Space>
           <div>
             <span className="text-xl font-semibold text-gray6">1,400</span>{" "}
@@ -72,7 +76,9 @@ export const ReportCard: FC = ({}) => {
             <div className="flex size-[28px] items-center justify-center rounded-full bg-red6 p-1 text-red4">
               <Cancel className="!text-lg" />
             </div>
-            <div className="text-sm font-bold text-red4">Thất bại</div>
+            <div className="font-title text-sm font-bold text-red4">
+              Thất bại
+            </div>
           </Space>
           <div>
             <span className="text-xl font-semibold text-gray6">1,400</span>{" "}

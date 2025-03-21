@@ -5,8 +5,8 @@ module.exports = {
   },
   theme: {
     extend: {
-      fontWeight: {
-        medium: "500",
+      fontFamily: {
+        title: ["ColourSans", "Open Sans", "sans-serif"],
       },
       backgroundImage: {
         "header-gradient": "linear-gradient(270deg, #35A1DA 0%, #324AAD 100%)",
@@ -25,8 +25,9 @@ module.exports = {
         gray7: "#3C403A",
         surface: "#FAFCFF",
         surface2: "#F7F8FA",
+        blue1: "#F5F9FF",
         blue2: "#ebf3ff",
-        blue3: "#f7f6fd",
+        blue3: "#ADCEFF",
         blue4: "#3385FF",
         "blue-gradient-from": "#369FFF",
         "blue-gradient-to": "#64B5FF",
@@ -41,7 +42,7 @@ module.exports = {
         green4: "#10835E",
         "green-gradient-from": "#31CE9C",
         "green-gradient-to": "#2EDE91",
-        greenBtn: "#2DC28D",
+        greenBtn: "#28bf8c",
         yellow1: "#FFFCEB",
         yellow2: "#FFF6C2",
         yellow3: "#FFE75C",

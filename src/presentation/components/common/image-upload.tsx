@@ -1,9 +1,14 @@
-import { App, GetProp, UploadFile, UploadProps } from "antd";
+import {
+  App,
+  GetProp,
+  UploadFile,
+  UploadProps as OriginalUploadProps,
+} from "antd";
 import React, { useState } from "react";
 import { Modal, Upload } from "antd";
 import { RequiredFields } from "../../utils/types";
 import { v4 as uuidv4 } from "uuid";
-import { Image } from "@mui/icons-material";
+import ImageIcon from "../../static/image-icon.svg";
 
 function ImageUpload(props: UploadImageProps) {
   const { message } = App.useApp();
@@ -16,7 +21,7 @@ function ImageUpload(props: UploadImageProps) {
     };
   });
 
-  const onChange: UploadProps["onChange"] = ({ fileList }) => {
+  const onChange: OriginalUploadProps["onChange"] = ({ fileList }) => {
     setImages(fileList);
   };
 
@@ -40,19 +45,12 @@ function ImageUpload(props: UploadImageProps) {
       fileList={imagesWithUid}
       onChange={onChange}
       uploadConditions={uploadConditions}
+      {...props}
     />
   );
 }
 
-function UploadImg(
-  props: RequiredFields<
-    Omit<UploadProps, "beforeUpload" | "onPreview" | "accept">,
-    "listType" | "maxCount"
-  > & {
-    uploadConditions?: (file: FileType) => boolean;
-    fileListLength: number;
-  },
-) {
+function UploadImg(props: UploadProps) {
   const [previewOpen, setPreviewOpen] = useState(false);
   const [previewImage, setPreviewImage] = useState("");
   const [previewTitle, setPreviewTitle] = useState("");
@@ -98,7 +96,7 @@ function UploadImg(
       >
         {props.fileListLength < props.maxCount ? (
           <div style={{ border: 0, background: "none" }}>
-            <Image className="!text-[50px] text-gray3" />
+            <img src={ImageIcon} />
           </div>
         ) : null}
       </Upload>
@@ -114,12 +112,21 @@ function UploadImg(
   );
 }
 
-type FileType = Parameters<GetProp<UploadProps, "beforeUpload">>[0];
+type FileType = Parameters<GetProp<OriginalUploadProps, "beforeUpload">>[0];
 export type UploadImage = Omit<UploadFile, "uid">;
+
+type UploadProps = RequiredFields<
+  Omit<OriginalUploadProps, "beforeUpload" | "onPreview" | "accept">,
+  "listType" | "maxCount"
+> & {
+  uploadConditions?: (file: FileType) => boolean;
+  fileListLength: number;
+};
+
 type UploadImageProps = {
   images: UploadImage[] | UploadFile[];
   setImages: React.Dispatch<React.SetStateAction<UploadImage[]>>;
-  maxCount?: UploadProps["maxCount"];
-};
+  maxCount?: OriginalUploadProps["maxCount"];
+} & OriginalUploadProps;
 
 export { ImageUpload };

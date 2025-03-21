@@ -24,7 +24,11 @@ export const FailOrderButton = () => {
       />
       {createPortal(
         <Sheet
-          title="Nhập lý do thất bại"
+          title={
+            (
+              <span className="font-title">Nhập lý do thất bại</span>
+            ) as unknown as string
+          }
           visible={visible}
           onClose={() => {
             setVisible(false);

@@ -34,9 +34,13 @@ export const ConstructionInfoCard: FC<ConstructionInfo> = ({
           <img src={image} className="size-full object-cover" />
         </div>
         <div className="flex size-full flex-col gap-1">
-          <div className="text-sm font-semibold">{name}</div>
-          <div className="text-xs text-gray5">Mã công trình: {id}</div>
-          <div className="text-xs text-gray6">Nhà thầu: {contractor}</div>
+          <div className="text-sm">{name}</div>
+          <div className="text-xs font-normal text-gray5">
+            Mã công trình: {id}
+          </div>
+          <div className="text-xs font-normal text-gray6">
+            Nhà thầu: {contractor}
+          </div>
         </div>
       </div>
       <div className="absolute left-0 top-0 flex size-full flex-col justify-between px-3 py-3">

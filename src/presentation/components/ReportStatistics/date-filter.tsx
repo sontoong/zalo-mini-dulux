@@ -1,5 +1,6 @@
 import { DatePicker } from "antd";
 import React, { FC } from "react";
+import CalendarIcon from "../../static/calendar-icon.svg";
 
 type Props = {
   value?: any;
@@ -19,6 +20,7 @@ const DateFilter: FC<Props> = ({ value, onChange, period }) => {
         picker={picker}
         className="size-full flex-1 rounded-lg border-none bg-gray1 text-sm shadow hover:bg-gray1"
         format={format}
+        suffixIcon={<img src={CalendarIcon} />}
       />
     );
   }
@@ -30,6 +32,7 @@ const DateFilter: FC<Props> = ({ value, onChange, period }) => {
       picker={picker}
       className="size-full flex-1 rounded-sm border-none bg-gray1 text-sm shadow hover:bg-gray1"
       format={format}
+      suffixIcon={<img src={CalendarIcon} />}
     />
   );
 };

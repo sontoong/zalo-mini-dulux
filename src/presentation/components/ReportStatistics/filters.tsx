@@ -13,7 +13,7 @@ const Filters = () => {
 
   return (
     <Form name="filters" initialValues={initialValues} form={form}>
-      <div className="flex h-[38px] items-center gap-3">
+      <div className="flex h-[29px] items-center gap-3">
         <Form.Item
           name="period"
           getValueFromEvent={(e) => e.period.value}
