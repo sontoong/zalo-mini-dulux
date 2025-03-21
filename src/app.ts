@@ -12,6 +12,9 @@ import "zmp-ui/zaui.css";
 
 import "./presentation/styles/Topbar.scss";
 
+// Import Swiper styles
+import "swiper/css";
+
 // import "./";
 // import "./utils/rippleEffect.js";
 // Import App Component

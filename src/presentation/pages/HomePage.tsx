@@ -31,7 +31,7 @@ const HomePage: FC = () => {
       />
       <div className="flex-1 overflow-auto">
         <HomePageBanner />
-        <div className="flex flex-col gap-5 px-3">
+        <div className="flex flex-col gap-5 px-3 pb-3">
           <CompanyInfoCard />
           <FeatureList />
         </div>

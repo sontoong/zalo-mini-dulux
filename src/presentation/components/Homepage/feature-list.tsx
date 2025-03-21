@@ -36,6 +36,11 @@ const FeatureList = () => {
       image: Zalo,
       linkTo: "/checkin-post",
     },
+    {
+      name: "Đăng bài1",
+      image: Zalo,
+      linkTo: "/checkin-post1",
+    },
   ];
 
   return (
