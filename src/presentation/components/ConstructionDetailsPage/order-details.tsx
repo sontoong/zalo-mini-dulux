@@ -12,7 +12,7 @@ const OrderDetails = () => {
   return (
     <Card styles={{ body: { padding: "12px" } }}>
       <div className="text-sm">
-        <div className="text-lg font-bold">Thông tin công trình</div>
+        <div className="text-lg font-bold">Thông tin đơn hàng</div>
         <Divider className="my-3" />
         <div>
           <div className="text-gray5">Giá trị đơn hàng</div>

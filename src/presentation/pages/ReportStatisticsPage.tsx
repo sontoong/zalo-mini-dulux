@@ -10,7 +10,7 @@ const ReportStatistics = () => {
         title="Thống kê kết quả"
         className="topbar h-auto flex-none pl-4"
       />
-      <div className="flex flex-1 flex-col gap-3 overflow-auto px-3 py-5">
+      <div className="flex flex-1 flex-col gap-5 overflow-auto px-3 py-5">
         <ReportFilters />
         <ReportList />
       </div>

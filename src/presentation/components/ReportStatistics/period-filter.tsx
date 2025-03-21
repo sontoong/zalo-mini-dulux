@@ -8,7 +8,7 @@ type Props = {
 
 const PeriodFilter: FC<Props> = ({ value, onChange }) => {
   return (
-    <div className="h-full overflow-hidden rounded-sm bg-gray1 shadow">
+    <div className="h-full flex-1 overflow-hidden rounded-sm bg-gray1 shadow">
       <Picker
         value={{ period: value }}
         onChange={onChange}

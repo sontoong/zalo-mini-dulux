@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { ElevateButton } from "../common/button";
 import { Icon, Sheet } from "zmp-ui";
 import { createPortal } from "react-dom";
-import { Card, Form } from "antd";
+import { Card } from "antd";
 import { ImageUpload, UploadImage } from "../common/image-upload";
 import { InputNumber } from "../common/input-number";
+import { Form } from "../common/form";
 
 export const ConfirmOrderButton = () => {
   const [form] = Form.useForm();
@@ -45,19 +46,21 @@ export const ConfirmOrderButton = () => {
             form={form}
             onFinish={onFinish}
             autoComplete="off"
-            className="flex-1 px-5"
+            className="flex flex-1 flex-col gap-3 px-5"
           >
             <Form.Item
               name="price"
               label="Giá trị đơn hàng"
+              labelCol={{ className: "!pb-0" }}
               rules={[{ type: "number", required: true }]}
+              style={{ marginBottom: "0px" }}
             >
               <InputNumber.Currency
                 placeholder="Giá trị đơn hàng"
                 className="w-full border-0 px-3 py-2 shadow"
               />
             </Form.Item>
-            <Form.Item>
+            <Form.Item noStyle>
               <Card
                 title={
                   <div className="flex gap-3">

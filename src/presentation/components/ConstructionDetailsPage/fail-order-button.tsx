@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { ElevateButton } from "../common/button";
 import { createPortal } from "react-dom";
 import { Icon, Picker, Sheet } from "zmp-ui";
-import { Form, Input } from "antd";
+import { Input } from "antd";
+import { Form } from "../common/form";
 
 export const FailOrderButton = () => {
   const [form] = Form.useForm();
@@ -42,15 +43,17 @@ export const FailOrderButton = () => {
             form={form}
             onFinish={onFinish}
             autoComplete="off"
-            className="px-5 pt-3"
+            className="flex flex-col gap-5 px-5 pt-3"
             onFinishFailed={(value) => console.log(value)}
           >
             <Form.Item
               name="reason"
               label="Chọn lý do thất bại"
+              labelCol={{ className: "!pb-0" }}
               rules={[{ required: true }]}
               getValueFromEvent={(e) => e.option.value}
               className="drop-shadow"
+              style={{ marginBottom: "0px" }}
             >
               <Picker
                 mask
@@ -84,7 +87,9 @@ export const FailOrderButton = () => {
             <Form.Item
               name="description"
               label="Mô tả"
+              labelCol={{ className: "!pb-0" }}
               rules={[{ type: "string", required: true }]}
+              style={{ marginBottom: "0px" }}
             >
               <Input.TextArea
                 placeholder="Nhập lý do khác hoặc tên loại sơn khác"
