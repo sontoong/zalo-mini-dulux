@@ -14,12 +14,15 @@ import ConstructionDetailsPage from "./presentation/pages/ConstructionDetailsPag
 import ConstructionListPage from "./presentation/pages/ConstructionListPage";
 import HomePage from "./presentation/pages/HomePage";
 import NotificationPage from "./presentation/pages/NotificationPage";
-import ReportStatisticsPage from "./presentation/pages/ReportStatisticsPage2";
+import ReportStatisticsPage from "./presentation/pages/ReportStatisticsPage";
+import ReportStatisticsPage2 from "./presentation/pages/ReportStatisticsPage2";
 import MyQRPage from "./presentation/pages/MyQRPage";
 import WorkerRegistrationPage from "./presentation/pages/WorkerRegistrationPage";
 import WorkerRegistrationResultPage from "./presentation/pages/WorkerRegistrationResultPage";
 import CheckinPostPage from "./presentation/pages/CheckinPostPage";
 import CheckinPostPage1 from "./presentation/pages/CheckinPostPage1";
+import FAQsPage from "./presentation/pages/FAQsPage";
+import ContructionMaterialCalculatePage from "./presentation/pages/ContructionMaterialCalculatePage";
 
 import "dayjs/locale/vi";
 import timezone from "dayjs/plugin/timezone";
@@ -42,6 +45,7 @@ const AppRoutes = () => {
         element={<ConstructionDetailsPage />}
       ></Route>
       <Route path="/thong-ke" element={<ReportStatisticsPage />}></Route>
+      <Route path="/thong-ke-2" element={<ReportStatisticsPage2 />}></Route>
       <Route path="/chat-zalo" element={<HomePage />}></Route>
       <Route path="/thong-bao" element={<NotificationPage />}></Route>
       <Route path="/my-qr" element={<MyQRPage />}></Route>
@@ -55,6 +59,11 @@ const AppRoutes = () => {
       ></Route>
       <Route path="/checkin-post" element={<CheckinPostPage />}></Route>
       <Route path="/checkin-post1" element={<CheckinPostPage1 />}></Route>
+      <Route path="/faqs" element={<FAQsPage />}></Route>
+      <Route
+        path="/material-calculate"
+        element={<ContructionMaterialCalculatePage />}
+      ></Route>
     </AnimationRoutes>
   );
 };

@@ -10,6 +10,7 @@ module.exports = {
       },
       backgroundImage: {
         "header-gradient": "linear-gradient(270deg, #35A1DA 0%, #324AAD 100%)",
+        "step-gradient": "linear-gradient(90deg, #002A68 0%, #0041A3 100%)",
       },
       boxShadow: {
         "custom-light": "0px 0px 0.84px 0px #30497433",
@@ -18,6 +19,7 @@ module.exports = {
       colors: {
         "gray-fade": "rgba(89, 86, 86, 0.65)",
         gray1: "#F4F5F4",
+        gray2: "#EAECEA",
         gray3: "#D7D5CB",
         gray4: "#989E94",
         gray5: "#798174",
@@ -61,9 +63,11 @@ module.exports = {
       dropShadow: {
         red3: "0 4px 0 #F44949",
         greenBtn: "0 4px 0 #04977F",
+        "top-card": "0 -4px 24px  #00000014",
       },
       boxShadow: {
         kpi: "0 10px 30px 0 #98CEFF52",
+        faqs: "0 4px 24px 0 #0000000F",
       },
       padding: {
         1.5: "0.375rem",

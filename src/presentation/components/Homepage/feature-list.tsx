@@ -17,6 +17,11 @@ const FeatureList = () => {
       linkTo: "/thong-ke",
     },
     {
+      name: "Thống kê kết quả thầu thợ",
+      image: ThongKe,
+      linkTo: "/thong-ke-2",
+    },
+    {
       name: "Chat Zalo OA",
       image: Zalo,
       linkTo: "/chat-zalo",
@@ -40,6 +45,16 @@ const FeatureList = () => {
       name: "Đăng bài1",
       image: Zalo,
       linkTo: "/checkin-post1",
+    },
+    {
+      name: "FAQs",
+      image: Zalo,
+      linkTo: "/faqs",
+    },
+    {
+      name: "Tính khối lượng vật tư công trình",
+      image: Zalo,
+      linkTo: "/material-calculate",
     },
   ];
 

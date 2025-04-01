@@ -1,8 +1,20 @@
 import React from "react";
-import { InputNumber as OriginInputNumber, InputNumberProps } from "antd";
+import {
+  InputNumber as OriginInputNumber,
+  InputNumberProps,
+  ConfigProvider,
+} from "antd";
 
 function InputNumber(props: TCustomInputNumber) {
-  return <OriginInputNumber min={0} changeOnWheel {...props} />;
+  return (
+    <ConfigProvider
+      theme={{
+        components: { InputNumber: { paddingBlock: 0, paddingInline: 0 } },
+      }}
+    >
+      <OriginInputNumber min={0} changeOnWheel className="p-0" {...props} />
+    </ConfigProvider>
+  );
 }
 
 function InputNumberCurrency({
