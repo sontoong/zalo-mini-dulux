@@ -3,16 +3,31 @@ import React, { useEffect, useMemo, useState } from "react";
 import { CheckOutlined } from "@ant-design/icons";
 import { Divider } from "antd";
 
-function Steps({ items, render, onChange, current, status }: Props) {
+function Steps({ items, render, onChange, current, status, setStatus }: Props) {
   const [currentInternalState, setCurrentInternalState] = useState<number>(0);
 
   const getCurItemStatus = (index: number) => {
     // Status is defined, force all
-    if (status) return status;
+    if (status) {
+      return status;
+    }
 
     // Status if undefined
-    if (index === currentInternal) return "active";
-    if (index < currentInternal) return "completed";
+    if (index === currentInternal) {
+      return "active";
+    }
+    if (index < currentInternal) {
+      return "completed";
+    }
+
+    // Custom validate
+    if (setStatus) {
+      const temptItemStatus = setStatus({ item: items[index], index });
+      if (temptItemStatus !== null) {
+        return temptItemStatus;
+      }
+    }
+
     return "inactive";
   };
 
@@ -86,6 +101,13 @@ type Props = {
   onChange?: (current: number) => void;
   current?: number;
   status?: Status;
+  setStatus?: ({
+    item,
+    index,
+  }: {
+    item: ItemProps;
+    index: number;
+  }) => Status | null;
 };
 
 type ItemProps = {

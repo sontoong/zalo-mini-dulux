@@ -1,11 +1,9 @@
-import { Card, Divider } from "antd";
+import { Card, Divider, FormInstance } from "antd";
 import React from "react";
 import { Form } from "../common/form";
 import { InputNumber } from "../common/input-number";
 
-export const MaterialForm = () => {
-  const [form] = Form.useForm();
-
+export const MaterialForm = ({ form }: Props) => {
   return (
     <div className="flex flex-col gap-2">
       {/* Diện tích */}
@@ -59,7 +57,7 @@ export const MaterialForm = () => {
         }}
         className="rounded-none pb-5"
       >
-        <Form form={form} className="flex flex-col gap-2">
+        <Form form={form} name="materialForm" className="flex flex-col gap-2">
           <Form.Item
             label={
               <div className="font-title text-xs font-bold">
@@ -98,4 +96,8 @@ export const MaterialForm = () => {
       </Card>
     </div>
   );
+};
+
+type Props = {
+  form: FormInstance;
 };

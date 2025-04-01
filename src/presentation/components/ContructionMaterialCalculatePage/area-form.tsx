@@ -1,13 +1,11 @@
-import { Card, Input } from "antd";
+import { Card, FormInstance, Input } from "antd";
 import React from "react";
 import { Form } from "../common/form";
 import { MultiSheetSelect } from "../common/multi-sheet-select";
 import { DownOutlined, RightOutlined } from "@ant-design/icons";
 import { InputNumber } from "../common/input-number";
 
-const AreaForm = () => {
-  const [form] = Form.useForm();
-
+const AreaForm = ({ form }: Props) => {
   return (
     <Card
       title={<div className="font-title text-lg font-bold">Tính diện tích</div>}
@@ -21,7 +19,7 @@ const AreaForm = () => {
       }}
       className="rounded-none pb-24"
     >
-      <Form form={form} className="flex flex-col gap-2">
+      <Form form={form} name="areaForm" className="flex flex-col gap-2">
         <Form.Item
           label={
             <div className="font-title text-xs font-bold">Loại công trình</div>
@@ -193,6 +191,10 @@ const AreaForm = () => {
 };
 
 export default AreaForm;
+
+type Props = {
+  form: FormInstance;
+};
 
 const constructions = [
   {
