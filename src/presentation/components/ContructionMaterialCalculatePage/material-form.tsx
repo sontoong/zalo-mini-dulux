@@ -66,7 +66,7 @@ export const MaterialForm = () => {
                 Độ phủ hoàn thiện - Sơn phủ ngoài trời
               </div>
             }
-            name="coefficient"
+            name="outside"
             labelCol={{ className: "!pb-0" }}
             style={{ marginBottom: 0 }}
           >
@@ -83,7 +83,7 @@ export const MaterialForm = () => {
                 Độ phủ hoàn thiện - Sơn phủ trong nhà
               </div>
             }
-            name="coefficient"
+            name="inside"
             labelCol={{ className: "!pb-0" }}
             style={{ marginBottom: 0 }}
           >

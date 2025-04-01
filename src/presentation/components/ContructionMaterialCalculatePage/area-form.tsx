@@ -49,6 +49,7 @@ const AreaForm = () => {
           >
             {({ open, value }) => (
               <Input
+                readOnly
                 variant="borderless"
                 onFocus={open}
                 placeholder="Chọn loại công trình"
@@ -171,6 +172,7 @@ const AreaForm = () => {
           >
             {({ open, value }) => (
               <Input
+                readOnly
                 variant="borderless"
                 onFocus={open}
                 placeholder="Chọn hiện trạng"
