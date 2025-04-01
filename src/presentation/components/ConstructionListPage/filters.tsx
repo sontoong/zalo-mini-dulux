@@ -4,7 +4,7 @@ import { StatusFilter } from "./status-filter";
 
 const Filters = () => {
   return (
-    <div className="flex h-[38px] items-center gap-2">
+    <div className="flex h-[29px] items-center gap-2">
       <DateFilter />
       <StatusFilter />
     </div>

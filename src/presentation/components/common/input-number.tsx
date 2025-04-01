@@ -64,6 +64,7 @@ function InputNumberCurrency({
       changeOnWheel
       formatter={currencyFormatter(currency)}
       parser={currencyParser}
+      controls={false}
       {...props}
     />
   );

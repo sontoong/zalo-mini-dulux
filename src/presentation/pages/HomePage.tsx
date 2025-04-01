@@ -2,8 +2,8 @@ import React, { FC, useContext, useState } from "react";
 import { Header, Page, useNavigate } from "zmp-ui";
 import { CompanyInfoCard, HomePageBanner } from "../components/Homepage";
 import FeatureList from "../components/Homepage/feature-list";
-import { Notifications } from "@mui/icons-material";
 import { Badge } from "antd";
+import NotificationIcon from "../static/noti-icon.svg"
 
 const HomePage: FC = () => {
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ const HomePage: FC = () => {
                 onClick={() => navigate("thong-bao")}
               >
                 <Badge count={5} offset={[0, 15]} size="small">
-                  <Notifications />
+                  <img src={NotificationIcon} alt="notification" />
                 </Badge>
               </div>
             </div>

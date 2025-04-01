@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import { ElevateButton } from "../common/button";
 import { createPortal } from "react-dom";
 import { Icon, Picker, Sheet } from "zmp-ui";
-import { Form, Input } from "antd";
+import { Input } from "antd";
+import { Form } from "../common/form";
 
 export const FailOrderButton = () => {
   const [form] = Form.useForm();
@@ -11,6 +12,7 @@ export const FailOrderButton = () => {
   const onFinish = (values: any) => {
     console.log(values);
     setVisible(false);
+    form.resetFields();
   };
 
   return (
@@ -22,31 +24,40 @@ export const FailOrderButton = () => {
       />
       {createPortal(
         <Sheet
-          title="Nhập lý do thất bại"
+          title={
+            (
+              <span className="font-title">Nhập lý do thất bại</span>
+            ) as unknown as string
+          }
           visible={visible}
           onClose={() => {
             setVisible(false);
             form.resetFields();
           }}
           mask
-          handler
+          handler={false}
           swipeToClose
           unmountOnClose
-          style={{ background: "#F7F8FA" }}
+          style={{ background: "#F7F8FA", paddingTop: "20px" }}
         >
+          <div className="text-center text-sm">
+            Vui lòng nhập lý do công trình thất bại
+          </div>
           <Form
             form={form}
             onFinish={onFinish}
             autoComplete="off"
-            className="px-5"
+            className="flex flex-col gap-5 px-5 pt-3"
             onFinishFailed={(value) => console.log(value)}
           >
             <Form.Item
               name="reason"
               label="Chọn lý do thất bại"
+              labelCol={{ className: "!pb-0" }}
               rules={[{ required: true }]}
               getValueFromEvent={(e) => e.option.value}
               className="drop-shadow"
+              style={{ marginBottom: "0px" }}
             >
               <Picker
                 mask
@@ -80,7 +91,9 @@ export const FailOrderButton = () => {
             <Form.Item
               name="description"
               label="Mô tả"
+              labelCol={{ className: "!pb-0" }}
               rules={[{ type: "string", required: true }]}
+              style={{ marginBottom: "0px" }}
             >
               <Input.TextArea
                 placeholder="Nhập lý do khác hoặc tên loại sơn khác"

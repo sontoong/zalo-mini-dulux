@@ -5,6 +5,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      fontFamily: {
+        title: ["ColourSans", "Open Sans", "sans-serif"],
+      },
       backgroundImage: {
         "header-gradient": "linear-gradient(270deg, #35A1DA 0%, #324AAD 100%)",
       },
@@ -19,10 +22,12 @@ module.exports = {
         gray4: "#989E94",
         gray5: "#798174",
         gray6: "#535850",
+        gray7: "#3C403A",
         surface: "#FAFCFF",
         surface2: "#F7F8FA",
+        blue1: "#F5F9FF",
         blue2: "#ebf3ff",
-        blue3: "#f7f6fd",
+        blue3: "#ADCEFF",
         blue4: "#3385FF",
         "blue-gradient-from": "#369FFF",
         "blue-gradient-to": "#64B5FF",
@@ -37,15 +42,18 @@ module.exports = {
         green4: "#10835E",
         "green-gradient-from": "#31CE9C",
         "green-gradient-to": "#2EDE91",
-        greenBtn: "#2DC28D",
+        greenBtn: "#28bf8c",
         yellow1: "#FFFCEB",
         yellow2: "#FFF6C2",
         yellow3: "#FFE75C",
+        yellow4: "#FFD800",
         yellow5: "#E0BF00",
         yellow6: "#B89C00",
         "orange-gradient-from": "#FF8B18",
         "orange-gradient-to": "#FF9F41",
         stroke2: "#EAECEA",
+        success: "#31CE80",
+        fail: "#FB5B5B",
       },
       fontSize: {
         "2xs": "10px",

@@ -1,0 +1,7 @@
+@font-face {
+  font-family: "ColourSans";
+  src: url("../fonts/ColourSansBoldVNU.otf") format("opentype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import { Card, Divider, Space } from "antd";
 import { Button, Icon } from "zmp-ui";
+import LocationIcon from "../../static/location-icon.svg";
 
 const ConstructionDetails = () => {
   const data = {
@@ -16,57 +17,68 @@ const ConstructionDetails = () => {
   };
 
   return (
-    <Card title={<div className="text-lg font-bold">Thông tin công trình</div>}>
+    <Card styles={{ body: { padding: "12px" } }}>
       <div className="text-sm">
-        <div>
-          <div className="text-gray5">Mã công trình</div>
-          <div className="font-medium">{data.id}</div>
+        <div className="font-title text-lg font-bold">Thông tin công trình</div>
+        <Divider className="my-3" />
+        <div className="flex flex-col gap-2">
+          <div className="font-normal text-gray5">Mã công trình</div>
+          <div className="font-medium text-black">{data.id}</div>
         </div>
-        <Divider />
-        <div>
-          <div className="text-gray5">Loại công trình</div>
-          <div className="font-medium">{data.constructionType}</div>
+        <Divider className="my-3" />
+        <div className="flex flex-col gap-2">
+          <div className="font-normal text-gray5">Loại công trình</div>
+          <div className="font-medium text-black">{data.constructionType}</div>
         </div>
-        <Divider />
-        <div>
-          <div className="text-gray5">Loại sơn</div>
-          <div className="font-medium">{data.paintType}</div>
+        <Divider className="my-3" />
+        <div className="flex flex-col gap-2">
+          <div className="font-normal text-gray5">Loại sơn</div>
+          <div className="font-medium text-black">{data.paintType}</div>
         </div>
-        <Divider />
+        <Divider className="my-3" />
         <Space direction="vertical">
-          <div>
-            <div className="text-gray5">Địa chỉ công trình</div>
-            <div className="font-medium">{data.constructionAddress}</div>
+          <div className="flex flex-col gap-2">
+            <div className="font-normal text-gray5">Địa chỉ công trình</div>
+            <div className="font-medium text-black">
+              {data.constructionAddress}
+            </div>
           </div>
           <Button
             variant="secondary"
-            className="!size-fit !rounded-lg !px-2 !py-1 !text-sm"
-            suffixIcon={<Icon icon="zi-location-solid" />}
+            className="!size-fit !rounded-lg !bg-blue2 !py-1 !pl-2 !pr-0 !text-sm !font-normal"
+            suffixIcon={
+              <img
+                src={LocationIcon}
+                className="absolute top-1/2 -translate-y-1/2"
+              />
+            }
           >
             Xem vị trí công trình
           </Button>
         </Space>
-        <Divider />
-        <div>
-          <div className="text-gray5">Người liên hệ</div>
-          <div className="font-medium">
+        <Divider className="my-3" />
+        <div className="flex flex-col gap-2">
+          <div className="font-normal text-gray5">Người liên hệ</div>
+          <div className="font-medium text-black">
             {data.contactName} ({data.contactNumber})
           </div>
         </div>
-        <Divider />
-        <div>
-          <div className="text-gray5">Vai trò</div>
-          <div className="font-medium">{data.contactRole}</div>
+        <Divider className="my-3" />
+        <div className="flex flex-col gap-2">
+          <div className="font-normal text-gray5">Vai trò</div>
+          <div className="font-medium text-black">{data.contactRole}</div>
         </div>
-        <Divider />
-        <div>
-          <div className="text-gray5">Giá trị ước tính công trình</div>
-          <div className="font-medium">{data.estPrice}</div>
+        <Divider className="my-3" />
+        <div className="flex flex-col gap-2">
+          <div className="font-normal text-gray5">
+            Giá trị ước tính công trình
+          </div>
+          <div className="font-medium text-black">{data.estPrice}</div>
         </div>
-        <Divider />
-        <div>
-          <div className="text-gray5">Thời gian sơn công trình</div>
-          <div className="font-medium">{data.date}</div>
+        <Divider className="my-3" />
+        <div className="flex flex-col gap-2">
+          <div className="font-normal text-gray5">Thời gian sơn công trình</div>
+          <div className="font-medium text-black">{data.date}</div>
         </div>
       </div>
     </Card>
