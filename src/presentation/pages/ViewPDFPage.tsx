@@ -40,7 +40,7 @@ const ViewPDFPage = () => {
                 renderTextLayer={false}
                 renderAnnotationLayer={false}
                 customTextRenderer={undefined}
-                pageNumber={pageNumber}
+                pageNumber={index + 1}
                 width={Math.min(containerWidth, maxWidth)}
               />
             ))}
