@@ -23,6 +23,10 @@ import CheckinPostPage from "./presentation/pages/CheckinPostPage";
 import CheckinPostPage1 from "./presentation/pages/CheckinPostPage1";
 import FAQsPage from "./presentation/pages/FAQsPage";
 import ContructionMaterialCalculatePage from "./presentation/pages/ContructionMaterialCalculatePage";
+import ToolsPage from "./presentation/pages/ToolsPage";
+import ESaleKitPage from "./presentation/pages/ESaleKitPage";
+import CataloguePage from "./presentation/pages/CataloguePage";
+import ViewPDFPage from "./presentation/pages/ViewPDFPage";
 
 import "dayjs/locale/vi";
 import timezone from "dayjs/plugin/timezone";
@@ -64,6 +68,10 @@ const AppRoutes = () => {
         path="/material-calculate"
         element={<ContructionMaterialCalculatePage />}
       ></Route>
+      <Route path="/tools" element={<ToolsPage />}></Route>
+      <Route path="/e-sale-kit" element={<ESaleKitPage />}></Route>
+      <Route path="/product-catalogue" element={<CataloguePage />}></Route>
+      <Route path="/view-pdf" element={<ViewPDFPage />}></Route>
     </AnimationRoutes>
   );
 };

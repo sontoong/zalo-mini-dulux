@@ -7,7 +7,7 @@ const ReportCard: FC = ({}) => {
   return (
     <div className="grid gap-3">
       {/* Số công trình */}
-      <div className="from-blue-gradient-from to-blue-gradient-to col-span-1 rounded-[20px] bg-gradient-to-br px-1 py-3">
+      <div className="col-span-1 rounded-[20px] bg-gradient-to-br from-blue-gradient-from to-blue-gradient-to px-1 py-3">
         <div className="flex flex-col items-center gap-5 text-white">
           <div className="rounded-xl bg-white/20 px-2 py-1 text-center text-sm font-bold text-white shadow">
             Số công trình
@@ -40,7 +40,7 @@ const ReportCard: FC = ({}) => {
         </div>
       </div>
       {/* Số thầu mở mới */}
-      <div className="from-green-gradient-from to-green-gradient-to col-span-1 rounded-[20px] bg-gradient-to-br px-1 py-3">
+      <div className="col-span-1 rounded-[20px] bg-gradient-to-br from-green-gradient-from to-green-gradient-to px-1 py-3">
         <div className="flex flex-col items-center gap-5 text-white">
           <div className="rounded-xl bg-white/20 px-2 py-1 text-center text-sm font-bold text-white shadow">
             Số thầu mở mới
@@ -73,7 +73,7 @@ const ReportCard: FC = ({}) => {
         </div>
       </div>
       {/* Doanh số */}
-      <div className="from-orange-gradient-from to-orange-gradient-to col-span-2 rounded-[20px] bg-gradient-to-br py-3 pl-3 opacity-80">
+      <div className="col-span-2 rounded-[20px] bg-gradient-to-br from-orange-gradient-from to-orange-gradient-to py-3 pl-3 opacity-80">
         <div className="flex size-full items-end gap-5 text-white">
           <div className="flex flex-col items-center gap-3">
             <div className="rounded-xl bg-white/20 px-2 py-1 text-center text-sm font-bold text-white shadow">
@@ -122,7 +122,7 @@ const ReportCard: FC = ({}) => {
       <div className="flex flex-col items-center gap-1 rounded-[20px] bg-blue2 p-3">
         <Space>
           <Share
-            className="rounded-full bg-[#b8b8b81a] p-1 text-green3"
+            className="text-green-success-icon rounded-full bg-[#b8b8b81a] p-1"
             fontSize="medium"
           />
           <div>Affiliate thành công</div>
@@ -139,7 +139,7 @@ const ReportCard: FC = ({}) => {
           <div>Giá trị ước tính</div>
         </Space>
         <div className="text-2xl font-semibold">
-          10,234,000,000 <span className="text-gray4 text-sm">VNĐ</span>
+          10,234,000,000 <span className="text-sm text-gray4">VNĐ</span>
         </div>
       </div>
     </div>

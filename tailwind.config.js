@@ -40,8 +40,9 @@ module.exports = {
         red6: "#F9B4B44D",
         green1: "#E1FAF2",
         green2: "#8BE4C84D",
-        green3: "#80C783",
+        green3: "#31CE9C",
         green4: "#10835E",
+        "green-success-icon": "#80C783",
         "green-gradient-from": "#31CE9C",
         "green-gradient-to": "#2EDE91",
         greenBtn: "#28bf8c",
@@ -68,6 +69,8 @@ module.exports = {
       boxShadow: {
         kpi: "0 10px 30px 0 #98CEFF52",
         faqs: "0 4px 24px 0 #0000000F",
+        kit: "0px 2px 12px 0px #0000000A",
+        pdf: "0px 2px 12px 0px #0000001F",
       },
       padding: {
         1.5: "0.375rem",

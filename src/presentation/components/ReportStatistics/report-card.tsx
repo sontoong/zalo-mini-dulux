@@ -43,7 +43,7 @@ export const ReportCard: FC = ({}) => {
       >
         <div className="flex flex-col gap-2">
           <Space>
-            <div className="flex size-[28px] items-center justify-center rounded-full bg-green2 p-1 text-green3">
+            <div className="text-green-success-icon flex size-[28px] items-center justify-center rounded-full bg-green2 p-1">
               <CheckCircle className="!text-lg" />
             </div>
             <div className="font-title text-sm font-bold text-green4">

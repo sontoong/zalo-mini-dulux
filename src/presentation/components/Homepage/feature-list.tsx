@@ -56,6 +56,11 @@ const FeatureList = () => {
       image: Zalo,
       linkTo: "/material-calculate",
     },
+    {
+      name: "Tất cả công cụ",
+      image: Zalo,
+      linkTo: "/tools",
+    },
   ];
 
   return (
