@@ -4,6 +4,7 @@ import { createPortal } from "react-dom";
 import { Icon, Picker, Sheet } from "zmp-ui";
 import { Input } from "antd";
 import { Form } from "../common/form";
+import CloseIcon from "../../static/close-icon.svg";
 
 export const FailOrderButton = () => {
   const [form] = Form.useForm();
@@ -26,7 +27,15 @@ export const FailOrderButton = () => {
         <Sheet
           title={
             (
-              <span className="font-title">Nhập lý do thất bại</span>
+              <>
+                <span className="font-title">Nhập lý do thất bại</span>
+                <div
+                  className="drop-shadow-closeBtn absolute right-[15px] top-[15px] flex size-[20px] items-center justify-center rounded-full bg-white"
+                  onClick={() => setVisible(false)}
+                >
+                  <img src={CloseIcon} alt="" />
+                </div>
+              </>
             ) as unknown as string
           }
           visible={visible}

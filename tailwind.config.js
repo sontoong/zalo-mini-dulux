@@ -61,6 +61,7 @@ module.exports = {
       dropShadow: {
         red3: "0 4px 0 #F44949",
         greenBtn: "0 4px 0 #04977F",
+        closeBtn: "0px 0px 4.44px #0000001F",
       },
       boxShadow: {
         kpi: "0 10px 30px 0 #98CEFF52",

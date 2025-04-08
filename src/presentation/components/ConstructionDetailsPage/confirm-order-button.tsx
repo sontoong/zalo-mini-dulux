@@ -7,6 +7,7 @@ import { ImageUpload, UploadImage } from "../common/image-upload";
 import { InputNumber } from "../common/input-number";
 import { Form } from "../common/form";
 import CameraIcon from "../../static/camera-icon.svg";
+import CloseIcon from "../../static/close-icon.svg";
 
 export const ConfirmOrderButton = () => {
   const [form] = Form.useForm();
@@ -31,7 +32,15 @@ export const ConfirmOrderButton = () => {
         <Sheet
           title={
             (
-              <span className="font-title">Ghi nhận thông tin đơn hàng</span>
+              <>
+                <span className="font-title">Ghi nhận thông tin đơn hàng</span>
+                <div
+                  className="drop-shadow-closeBtn absolute right-[15px] top-[15px] flex size-[20px] items-center justify-center rounded-full bg-white"
+                  onClick={() => setVisible(false)}
+                >
+                  <img src={CloseIcon} alt="" />
+                </div>
+              </>
             ) as unknown as string
           }
           visible={visible}
@@ -71,7 +80,7 @@ export const ConfirmOrderButton = () => {
                   <div className="flex gap-3">
                     <button
                       type="button"
-                      className="bg-blue1 relative size-[30px] rounded-lg border border-solid border-blue3 text-blue4"
+                      className="relative size-[30px] rounded-lg border border-solid border-blue3 bg-blue1 text-blue4"
                     >
                       <img
                         src={CameraIcon}
